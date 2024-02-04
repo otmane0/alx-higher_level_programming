@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-"""Everything is object"""
-
 class Square:
     """Area of a square"""
 
