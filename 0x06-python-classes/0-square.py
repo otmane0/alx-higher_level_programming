@@ -2,6 +2,6 @@
 
 # square; new obj.
 
-class square:
+class Square:
     pass
 
