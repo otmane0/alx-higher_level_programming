@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-# square; new obj.
+# Square: is an class
 
 class Square:
     pass
-
