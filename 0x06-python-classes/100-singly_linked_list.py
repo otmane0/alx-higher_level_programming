@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""A module for Square"""
 
 class Node:
     def __init__(self, data, next_node=None):
