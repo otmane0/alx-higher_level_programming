@@ -1,27 +1,35 @@
 #!/usr/bin/python3
-"""Everything is object"""
+"""A module for Square"""
 
 class Square:
-    """Area of a square"""
-
-    def __init__(self, size = 0):
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+    """
+    Access and update private attribute
+    """
+    def __init__(self, size=0) :
         self.__size = size
 
     def area(self):
+        """
+        Access and update private attribute
+        """
         return self.__size * self.__size
 
     @property
     def size(self):
+        """
+        Access and update private attribute
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """
+        Access and update private attribute
+        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+
