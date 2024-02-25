@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-# Square: is an class
-
+# Empty class Square
 class Square:
     pass
