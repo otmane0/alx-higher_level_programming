@@ -52,7 +52,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
         else:
-            rectangle_str = ""
-            for _ in range(self.__height):
-                rectangle_str += '#' * self.__width + '\n'
-            return rectangle_str.rstrip()
+            matrix = [['#' for _ in range(self.__width)] for _ in range(self.__height)]
+            return ('\n'.join(''.join(row) for row in matrix))
+
+
