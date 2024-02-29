@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""Define an empty class Rectangle."""
 
+#Rectangle: is object
 
 class Rectangle:
-    """Represent a rectangle."""
+    """
+    Rectangle project.
+    """
     pass
