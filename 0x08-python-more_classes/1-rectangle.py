@@ -37,6 +37,15 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
+    def __str__(self):
+        """Return a string representation of the rectangle"""
+        return "[Rectangle] ({:d}) {:d}/{:d}".format(
+                id(self), self.__width, self.__height)
+
+    def __str__(self):
+        """Return a string representation of the rectangle"""
+        return "[Rectangle] ({:d}) {:d}/{:d}".format(
+                id(self), self.__width, self.__height)
 
 
 
