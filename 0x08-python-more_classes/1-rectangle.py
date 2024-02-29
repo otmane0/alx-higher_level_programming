@@ -1,23 +1,22 @@
 #!/usr/bin/python3
-"""Define a rectangle class"""
+"""Define an empty class Rectangle."""
 
 
 class Rectangle:
-    """Represent a rectangle"""
-
+    """Represent a rectangle."""
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle"""
-        self.width = width
-        self.height = height
+        """Represent a rectangle."""
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
-        """Get the width of the rectangle"""
+        """Represent a width."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Set the width of the rectangle"""
+        """Represent a width."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,19 +25,16 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get the height of rectangle"""
+        """Represent a height."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Set the height of the rectangle"""
+        """Represent a height."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def __str__(self):
-        """Return a string representation of the rectangle"""
-        return "[Rectangle] ({:d}) {:d}/{:d}".format(
-                id(self), self.__width, self.__height)
+
