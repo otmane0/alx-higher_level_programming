@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""Module from a module"""
 def lookup(obj):
-    """Returns a list of available attributes and methods of an object."""
-    return [attr for attr in dir(obj) if not callable(getattr(obj, attr))]
+    """
+    Returns a list of available attributes and methods of an object.
+    """
+    return (dir(obj))
