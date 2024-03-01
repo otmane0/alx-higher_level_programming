@@ -44,12 +44,15 @@ class Rectangle:
         self.__width = value
 
     def area(self):
-        return self.__width * self.__height
+        size_area = self.__width * self.__height
+        return size_area
 
     def perimeter(self):
         return 2 * (self.__width + self.__height) if self.__width and self.__height else 0
 
     def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ""
         return '\n'.join([self.print_symbol * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
