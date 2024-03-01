@@ -4,13 +4,6 @@
 
 class Rectangle:
 
-    @classmethod
-    def square(cls, size=0):
-        """Create a new square instance."""
-
-        return cls(size, size)
-
-
     """REpresent a rectangle"""
     number_of_instances = 0
     print_symbol = '#'
@@ -84,6 +77,11 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Create a new square instance."""
+        return cls(size, size)
 
 
 
