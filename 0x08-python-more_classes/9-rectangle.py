@@ -5,11 +5,6 @@
 class Rectangle:
     """Rectangle"""
 
-    @classmethod
-    def square(cls, size=0):
-        """Create a new square instance."""
-        return cls(size, size)
-
     number_of_instances = 0
     print_symbol = '#'
 
@@ -68,6 +63,7 @@ class Rectangle:
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """bigger or equal"""
         if not isinstance(rect_1, Rectangle):
@@ -82,6 +78,11 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Create a new square instance."""
+        return cls(size, size)
 
 
 
