@@ -48,13 +48,12 @@ class Rectangle:
         return 2 * (self.__width + self.__height) if self.__width and self.__height else 0
 
     def __str__(self):
-        """Return a string representation of the rectangle"""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+        return '\n'.join(['#' * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        """Return a string representation of the rectangle"""
+        return "<Rectangle({}, {}) object at {}>".format(
+                self.__width, self.__height, hex(id(self)))
 
     def __del__(self):
         print("Bye rectangle...")
