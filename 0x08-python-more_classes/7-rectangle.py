@@ -4,7 +4,7 @@
 
 class Rectangle:
     """symbol of #"""
-    print_symbol = "#"
+    print_symbol = '#'
     """REpresent a rectangle"""
     number_of_instances = 0
 
@@ -50,7 +50,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height) if self.__width and self.__height else 0
 
     def __str__(self):
-        return '\n'.join([self.print_symbol * self.__width for _ in range(self.__height)])
+        return '\n'.join([Rectangle.print_symbol * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
