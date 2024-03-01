@@ -4,7 +4,7 @@
 
 class Rectangle:
     """symbol of #"""
-    print_symbol = '#'
+    print_symbol = "#"
     """REpresent a rectangle"""
     number_of_instances = 0
 
