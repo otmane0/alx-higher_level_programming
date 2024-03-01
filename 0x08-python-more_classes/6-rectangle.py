@@ -9,8 +9,8 @@ class Rectangle:
     """Represent a rectangle."""
     def __init__(self, width=0, height=0):
         """Represent a rectangle."""
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     @property
@@ -42,22 +42,13 @@ class Rectangle:
         self.__width = value
 
     def area(self):
-        area = self.__width * self.__height
-        return area
+        return self.__width * self.__height
 
     def perimeter(self):
-
-        perimeter = 2 * (self.__width + self.__height)
-        if self.__width == 0 or self.__height == 0:
-            perimeter = 0
-        return perimeter
+        return 2 * (self.__width + self.__height) if self.__width and self.__height else 0
 
     def __str__(self):
-        if self.__width == 0 or self.__height == 0:
-            return ("")
-        else:
-            matrix = [['#' for _ in range(self.__width)] for _ in range(self.__height)]
-            return ('\n'.join(''.join(row) for row in matrix))
+        return '\n'.join(['#' * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
@@ -65,6 +56,3 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
-
-
