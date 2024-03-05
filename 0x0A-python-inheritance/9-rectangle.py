@@ -12,7 +12,7 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    def erea(self):
+    def area(self):
         """Return erea"""
         return self.__width * self.__height
 
