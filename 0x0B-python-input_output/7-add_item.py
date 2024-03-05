@@ -10,7 +10,7 @@ arguments = list(sys.argv[1:])
 
 try:
     old_data = load_from('add_item.json')
-except Exception:
+except FileNotFoundError:
     old_data = []
 
 old_data.extend(arguments)
