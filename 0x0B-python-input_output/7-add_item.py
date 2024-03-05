@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """add/don't add"""
 
+import sys
 save_to = __import__('5-save_to_json_file').save_to_json_file
 load_from = __import__('6-load_from_json_file').load_from_json_file
 
-import sys
 
 arguments = list(sys.argv[1:])
 
