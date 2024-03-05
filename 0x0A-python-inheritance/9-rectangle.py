@@ -14,12 +14,12 @@ class Rectangle(BaseGeometry):
 
     def erea(self):
         """Return erea"""
-        erea = self.__width * self.__height
+        return self.__width * self.__height
 
 
     def __str__(self):
         """str presentation"""
-        return ("[Rectangle]" + str(self.__width) + "/" + str(self.__height))
+        return "[Rectangle]" + str(self.__width) + "/" + str(self.__height)
 
 
 
