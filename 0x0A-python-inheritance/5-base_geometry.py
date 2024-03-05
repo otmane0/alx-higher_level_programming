@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Printing"""
+""" module of BaseGeometry class"""
 
 class BaseGeometry:
-    """empty class"""
-
+    """BaseGeometry class"""
     pass
