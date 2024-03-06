@@ -79,6 +79,7 @@ class Rectangle(Base):
 
 
     def _update(self, id=None, width=None, height=None, x=None, y=None):
+        """args"""
         if id is not None:
             self.id = id
         if width is not None:
@@ -91,6 +92,7 @@ class Rectangle(Base):
             self.y = y
 
     def update(self, *args):
+        """printing args/kwargs"""
         if args:
             self._update(*args)
 
