@@ -1,1 +1,1 @@
-Almost a circle
+Everything is object
