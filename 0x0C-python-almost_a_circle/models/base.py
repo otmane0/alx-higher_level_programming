@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Project"""
+
 class Base:
     """blass Base"""
 
