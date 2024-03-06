@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Rectangle module"""
-
 from models.base import Base
 
 class Rectangle(Base):
@@ -21,7 +20,6 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """Setter method for width"""
         self.__width = value
 
     @property
@@ -31,7 +29,6 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """Setter method for height"""
         self.__height = value
 
     @property
@@ -41,7 +38,6 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """Setter method for x"""
         self.__x = value
 
     @property
@@ -51,5 +47,4 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """Setter method for y"""
         self.__y = value
