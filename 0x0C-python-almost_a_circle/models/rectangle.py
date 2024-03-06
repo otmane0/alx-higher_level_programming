@@ -92,10 +92,12 @@ class Rectangle(Base):
         if y is not None:
             self.__y = y
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """printing *args/kwargs"""
         if args:
             self._update(*args)
+        elif kwargs:
+            self._update(**kwargs)
 
 
 
