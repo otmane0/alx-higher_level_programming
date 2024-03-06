@@ -24,10 +24,10 @@ class Square(Rectangle):
 
     def _update(self, size=None, x=None, y=None, id=None):
         """for up func"""
-        if id is not None:
-            self.id = id
         if size is not None:
             self.size = size
+        if id is not None:
+            self.id = id
         if x is not None:
             self.x = x
         if y is not None:
