@@ -15,7 +15,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        self.id = id
+
 
 
     @property
@@ -59,12 +59,3 @@ class Rectangle(Base):
         """setter"""
         self.__y = value
 
-    @property
-    def id(self):
-       """id"""
-       return self.__id
-
-    @id.setter
-    def id(self, value):
-        """setter"""
-        self.__id = value
