@@ -21,3 +21,25 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
 
+
+    def _update(self, size=None, x=None, y=None, id=None):
+        """for up func"""
+        if size is not None:
+            self.width = size
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+        if id is not None:
+            self.id = id
+
+    def update(self, *args, **kwargs):
+        """up func"""
+
+        if args:
+            self._update(*args)
+        if kwargs:
+            self._update(**kwargs)
+
+
+
