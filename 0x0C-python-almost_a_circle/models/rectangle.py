@@ -75,11 +75,12 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
+        """print"""
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.__x, self.__y, self.__width, self.__height)
 
 
     def _update(self, id=None, width=None, height=None, x=None, y=None):
-        """args"""
+        """update"""
         if id is not None:
             self.id = id
         if width is not None:
@@ -92,7 +93,7 @@ class Rectangle(Base):
             self.__y = y
 
     def update(self, *args):
-        """printing args/kwargs"""
+        """printing *args/kwargs"""
         if args:
             self._update(*args)
 
