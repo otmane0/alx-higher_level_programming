@@ -60,5 +60,5 @@ class Rectangle(Base):
             raise TypeError("{} must be an integer".format(name))
         if eql and value < 0:
             raise ValueError("{} must be >= 0".format(name))
-        elif not eql and value < 0:
+        elif not eql and value <= 0:
             raise ValueError("{} must be > 0".format(name))
