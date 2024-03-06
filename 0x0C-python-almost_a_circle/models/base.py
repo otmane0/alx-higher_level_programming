@@ -7,8 +7,8 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """For all"""
-        if id != None:
+        """Constractor"""
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
