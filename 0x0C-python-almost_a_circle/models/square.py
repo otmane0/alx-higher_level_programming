@@ -49,10 +49,9 @@ class Square(Rectangle):
 
         return {
             'id': self.id,
-            'width': self.width,
-            'height': self.height,
-            'x': self.x,
-            'y': self.y
+            'size': self.size,
+            'x': self.__x,
+            'y': self.__y
         }
 
 
