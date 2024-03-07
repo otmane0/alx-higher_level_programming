@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Square"""
 
+import json
+
 from models.rectangle import Rectangle
 
 class Square(Rectangle):
@@ -41,6 +43,17 @@ class Square(Rectangle):
             self._update(*args)
         if kwargs:
             self._update(**kwargs)
+
+    def to_dictionary(self):
+        """To dict"""
+
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
 
 
 
