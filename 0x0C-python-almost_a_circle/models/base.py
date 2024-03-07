@@ -27,15 +27,32 @@ class Base:
     def save_to_file(cls, list_objs):
         if list_objs is None:
             list_objs = []
-
         json_list = [ob.to_dictionary() for ob in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as F:
             F.write(json.dumps(json_list))
     @staticmethod
     def from_json_string(json_string):
+        """to python"""
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
+
+    def create(cls, **dictionary):
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls is Rectangle:
+            new = Rectangle(1, 1)
+        elif cls is Square:
+            new = Square
+        else:
+            new = None
+        new.update(**dictionary)
+        return new
+
+
+
+
+
 
 
 
