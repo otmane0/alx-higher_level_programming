@@ -47,7 +47,7 @@ class Square(Rectangle):
         """To dict"""
 
         return {
-            'id': self.id, 'size': self.size, 'x': self.__x,'y': self.__y}
+            'id': self.id, 'size': self.__width, 'x': self.__x,'y': self.__y}
 
 
 
