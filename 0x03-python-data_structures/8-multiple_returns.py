@@ -1,13 +1,9 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if sentence == None:
-        lenn = 0
-        f_char = None
-        return (lenn, None)
+    if sentence == "":
+        return (0, None)
 
     lenn = len(sentence)
-    for i in sentence:
-            f_char = i
-            break
+    f_char = sentence[0]
 
     return (lenn, f_char)
