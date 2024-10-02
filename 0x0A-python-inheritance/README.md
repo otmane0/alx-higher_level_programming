@@ -1,1 +1,0 @@
-class from a class
