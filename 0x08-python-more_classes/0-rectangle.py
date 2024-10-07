@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""A module class Rectangle: class"""
+"""A module  Rectangle"""
+
 
 class Rectangle:
     """Represent a Rectangle"""
-
     pass
