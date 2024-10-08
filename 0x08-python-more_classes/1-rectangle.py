@@ -38,8 +38,5 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def __str__(self):
-        """Return a string representation of the rectangle"""
-        return "[Rectangle] ({:d}) {:d}/{:d}".format(
-                id(self), self.__width, self.__height)
+
 
