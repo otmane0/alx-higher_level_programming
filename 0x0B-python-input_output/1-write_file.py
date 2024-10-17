@@ -3,7 +3,7 @@
 
 
 def write_file(filename="", text=""):
-    """Write in file."""
+    """Print in file."""
     with open(filename, "w", encoding="utf-8") as f:
             total = f.write(text)
 
