@@ -4,5 +4,5 @@ import json
 def load_from_json_file(filename):
     """Write"""
     with open(filename, "w", encoding="utf-8") as file:
-        file.write(json.load(filename))
+        file.write(json.loads(filename))
 
