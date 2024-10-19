@@ -27,17 +27,11 @@ class Student:
             attrs (list): (Optional) The attributes to represent.
         """
 
-        # If attrs is a list of strings, filter the attributes
         if isinstance(attrs, list) and all(isinstance(ele, str) for ele in attrs):
             result = {}
-            # Loop over the attrs list
-            for attr in attrs:
-                # Manually check if the attribute exists in self.__dict__
-                for key in self.__dict__:
-                    if key == attr:
-                        # Add the attribute and its value to the result dictionary
-                        result[key] = self.__dict__[key]
+            for k in self.__dict__:
+                if k == attrs:
+                    result[k] = self.__dict__[k]
             return result
 
-        # Fallback to returning the entire dictionary if conditions aren't met
         return self.__dict__
