@@ -26,12 +26,13 @@ class Student:
         Args:
             attrs (list): (Optional) The attributes to represent.
         """
+        if attrs == None:
+            return self.__dict__
 
-        if isinstance(attrs, list) and all(isinstance(ele, str) for ele in attrs):
+        elif isinstance(attrs, list) and all(isinstance(ele, str) for ele in attrs):
             result = {}
             for k in self.__dict__:
                 if k == attrs:
                     result[k] = self.__dict__[k]
             return result
 
-        return self.__dict__
