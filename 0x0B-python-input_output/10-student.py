@@ -17,16 +17,36 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs=None):
-        """Get a dictionary representation of the Student.
+def to_json(self, attrs=None):
+    """Get a dictionary representation of the Student.
 
-        If attrs is a list of strings, represents only those attributes
-        included in the list.
+    If attrs is a list of strings, represents only those attributes
+    included in the list.
 
-        Args:
-            attrs (list): (Optional) The attributes to represent.
-        """
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+    Args:
+        attrs (list): (Optional) The attributes to represent.
+    """
+
+    # If no attrs is provided, return all attributes
+    if attrs == None:
         return self.__dict__
+
+    # If attrs is a list of strings, filter for those attributes
+    elif type(attrs) == list and all(type(ele) == str for ele in attrs):
+        result = {}
+
+        # Loop over each requested attribute in attrs
+        for k in attrs:
+
+            # Now check if the attribute exists in the instance's __dict__
+            for key in self.__dict__:
+                if key == k:
+                    # Add it to the result dictionary with its value
+                    result[key] = self.__dict__[key]
+                    break
+
+        # Return the filtered result
+        return result
+
+    # If attrs isn't a valid list of strings, return all attributes
+    return self.__dict__
