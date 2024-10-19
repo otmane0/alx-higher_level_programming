@@ -43,10 +43,10 @@ def to_json(self, attrs=None):
                 if key == k:
                     # Add it to the result dictionary with its value
                     result[key] = self.__dict__[key]
-                    break
+
 
         # Return the filtered result
         return result
 
     # If attrs isn't a valid list of strings, return all attributes
-    return self.__dict__
+    return result.__dict__
