@@ -1,6 +1,5 @@
 -- No genre Import the database dump
 
-USE hbtn_0d_tvshows;
 
 SELECT 
     tv_genres.name;
