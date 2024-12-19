@@ -13,3 +13,4 @@ HAVING
     number_of_shows > 0
 ORDER BY 
     number_of_shows DESC;
+
