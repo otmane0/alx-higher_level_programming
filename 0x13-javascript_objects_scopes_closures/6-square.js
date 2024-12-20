@@ -1,24 +1,19 @@
 #!/usr/bin/node
+
 /*
-Second class, Inhertance
-*/
+Square Class
+ */
+const dadSquare = require('./5-square');
 
-const Rectangle = require('./4-rectangle');
-
-class Square extends Rectangle {
-  constructor(size) {
-    super(size, size); // Call the parent class's constructor
-  }
-
-  charPrint(c) {
-    if (c) {
-      // Temporarily modify the parent's `print()` logic by overriding its behavior
-      for (let i = 0; i < this.height; i++) {
-        console.log(c.repeat(this.width));
-      }
+class Square extends dadSquare {
+  charPrint (c) {
+    if (c === undefined) {
+      this.print();
     } else {
-      // Use the parent class's `print()` method for default behavior
-      super.print();
+      let i; let j; const tre = '';
+      for (let i = 0; i < this.height; i++) {
+        console.log('X'.repeat(this.width));
+      }
     }
   }
 }
