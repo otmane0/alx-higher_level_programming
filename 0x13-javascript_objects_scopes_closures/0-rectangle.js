@@ -1,5 +1,7 @@
 #!/usr/bin/node
 /*
-Object class
-*/
-class Rectangle {};
+First class
+*/ 
+class Rectangle {
+}
+module.exports = Rectangle;
