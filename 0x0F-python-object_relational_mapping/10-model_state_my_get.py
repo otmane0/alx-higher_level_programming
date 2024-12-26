@@ -13,7 +13,7 @@ if __name__ == "__main__":
     database_name = sys.argv[3]
     state_name_to_search = sys.argv[4]
 
-    url = f"mysql+mysqlconnector://{mysql_username}:{mysql_password}@localhost:3306/{database_name}?charset=utf8mb4"
+    url = f"mysql+mysqldb://{mysql_username}:{mysql_password}@localhost:3306/{database_name}?charset=utf8mb4"
 
 
     engine = create_engine(url)
