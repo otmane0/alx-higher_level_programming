@@ -18,16 +18,17 @@ if __name__ == "__main__":
 
     query = 'SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states \
                 ON cities.state_id = states.id \
-                WHERE states.name = %s \
                 ORDER BY cities.id ASC'
 
 
 
-    cursor.execute(query, (argv[4],))
+    cursor.execute(query)
 
     result = cursor.fetchall()
+    string = ""
     for row in result:
-        print(row)
+        if row[1] == argv[4]:
+            string += ', '+row[0]
 
     cursor.close()
     db.close()
