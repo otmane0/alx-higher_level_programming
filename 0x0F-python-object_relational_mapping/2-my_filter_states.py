@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""python3 -c 'print(__import__("my_module").__doc__)'"""
+"""Order by id"""
 
 if __name__ == "__main__":
+
     import MySQLdb
     from sys import argv
 
@@ -21,8 +22,9 @@ if __name__ == "__main__":
     cursor.execute(query, (argv[4],))
 
     result = cursor.fetchall()
-    for row in result:
-        print(row)
+    for one in result:
+        if one[1] == argv[4]:
+            print(one)
 
     cursor.close()
     db.close()
