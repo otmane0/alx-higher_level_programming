@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Join"""
 
 if __name__ == "__main__":
     import MySQLdb
