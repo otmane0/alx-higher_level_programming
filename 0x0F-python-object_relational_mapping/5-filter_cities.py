@@ -1,35 +1,25 @@
 #!/usr/bin/python3
+"""couple cities"""
 
+if __name__ == '__main__':
 
-if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-    db = MySQLdb.connect(
+    Mydb = MySQLdb.connect(
         host='localhost',
         user=argv[1],
         passwd=argv[2],
-        db=argv[3],
-        port=3306
+        db=argv[3]
     )
+    cur = Mydb.cursor()
 
-    cursor = db.cursor()
+    cur.execute('SELECT cities.name, states.name FROM cities \
+    JOIN states ON cities.state_id = states.id ORDER BY cities.state_id ASC')
+    all = cur.fetchall()
 
-
-    query = 'SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states \
-                ON cities.state_id = states.id \
-                ORDER BY cities.id ASC'
-
-
-
-    cursor.execute(query)
-
-    result = cursor.fetchall()
-    string = ""
-    for row in result:
-        if row[1] == argv[4]:
-            string += ', '+row[0]
+    string = ''
+    for one in all:
+        if one[1] == argv[4]:
+            string += ', '+one[0]
     print(string[2:])
-
-    cursor.close()
-    db.close()
