@@ -17,3 +17,4 @@ if __name__ == "__main__":
     for one in all_a:
         session.delete(one)
     session.commit()
+    session.close()
