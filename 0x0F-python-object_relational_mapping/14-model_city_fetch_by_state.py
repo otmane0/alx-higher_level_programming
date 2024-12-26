@@ -1,8 +1,8 @@
-
 #!/usr/bin/python3
 
 """Sqlalchemy"""
-from model_state import Base, State
+from model_state import State
+from model_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import sys
@@ -20,12 +20,10 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name.like('%a%')).all()
 
 
-    for state in states:
-        session.delete(state)
+    cities = session.query(City, State).join(State, City.state_id == State.id).order_by(City.id).all()
 
-    session.commit()
-    session.close()
 
+    for city, state in cities:
+        print (f"{state.name}: ({city.id}) {city.name}")
