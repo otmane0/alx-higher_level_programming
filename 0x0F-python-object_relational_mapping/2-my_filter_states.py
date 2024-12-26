@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Order by id"""
+"""Filter states by name"""
 
 if __name__ == "__main__":
 
@@ -7,24 +7,16 @@ if __name__ == "__main__":
     from sys import argv
 
     db = MySQLdb.connect(
-        host='localhost',
+        host="localhost",
         user=argv[1],
         passwd=argv[2],
-        db=argv[3],
-        port=3306
+        db=argv[3]
     )
+    cur = db.cursor()
 
-    cursor = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id {};".format("ASC"))
+    all_rows = cur.fetchall()
 
-
-    query = "SELECT id, name FROM states ORDER BY id ASC"
-
-    cursor.execute(query, (argv[4],))
-
-    result = cursor.fetchall()
-    for one in result:
+    for one in all_rows:
         if one[1] == argv[4]:
             print(one)
-
-    cursor.close()
-    db.close()
