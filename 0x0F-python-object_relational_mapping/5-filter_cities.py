@@ -29,6 +29,7 @@ if __name__ == "__main__":
     for row in result:
         if row[1] == argv[4]:
             string += ', '+row[0]
+    print(string[2:])
 
     cursor.close()
     db.close()
