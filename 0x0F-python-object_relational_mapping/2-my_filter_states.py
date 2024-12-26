@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Mysqldb lib"""
+"""python3 -c 'print(__import__("my_module").__doc__)'"""
 
 if __name__ == "__main__":
     import MySQLdb
