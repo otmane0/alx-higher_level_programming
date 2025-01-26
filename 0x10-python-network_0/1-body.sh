@@ -1,3 +1,3 @@
 #!/bin/bash
-# display the length of the conetent
-curl -sL GET $@ 
+#display the length of the conetent
+curl -sL $@ 
