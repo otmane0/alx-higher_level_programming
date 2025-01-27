@@ -1,3 +1,3 @@
 #!/bin/bash
-#display the length of the conetent
-curl -sI $@ | grep -i 'Allow:' | cut ' ' -f2- | tr -d '\r'
+#When you use -d, you are telling the command "here is a specific value or piece of data that I want you to use in this operation.
+curl -sI | grep -i 'Allow:' | cut -d ' ' -f2- | tr -d '\r' $@ 
