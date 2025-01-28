@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Get specific key, from a URL header
+"""Get specific key, from a URL header"""
 from sys import argv
 from urllib.request import urlopen
 
