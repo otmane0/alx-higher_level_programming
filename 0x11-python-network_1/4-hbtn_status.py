@@ -10,4 +10,4 @@ if __name__ == '__main__':
    body = requests.get(url)
    print("Body response:")
    print("\t- type:", type(body.text))
-   print("\t- content:", body.content)
+   print("\t- content:", body.text)
