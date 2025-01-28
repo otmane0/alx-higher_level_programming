@@ -11,15 +11,15 @@ if __name__ == '__main__':
 
     data = {'q': q}
 
+    response = requests.post(url, data=data).json()
     try:
-        response = requests.post(url, data=data).json()
         if not response:
             print("No result") #empty JSon
         else:
             if "id" in response and "name" in response:
                     print(f"[{response['id']}] {response['name']}")
 
-    except ValueError:
+    except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")  # Response is not valid JSON
 
 
