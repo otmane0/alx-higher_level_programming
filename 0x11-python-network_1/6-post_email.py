@@ -12,5 +12,5 @@ if __name__ == '__main__':
 
 
     response = requests.post(url, data=data)
-    print(response.content)
+    print(response.text)
 
