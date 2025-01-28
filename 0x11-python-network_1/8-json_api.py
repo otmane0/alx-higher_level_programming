@@ -7,9 +7,7 @@ import requests
 if __name__ == '__main__':
 
     url = "http://0.0.0.0:5000/search_user"
-    q = argv[1]
-    if not argv[1]:
-        q=""
+    q = argv[1] if len(argv) > 1 else ""
 
     data = {'q': q}
 
@@ -21,7 +19,7 @@ if __name__ == '__main__':
             if "id" in response and "name" in response:
                     print(f"[{response['id']}] {response['name']}")
 
-    except requests.exceptions.JSONDecodeError:
+    except ValueError:
         print("Not a valid JSON")  # Response is not valid JSON
 
 
